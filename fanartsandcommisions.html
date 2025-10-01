@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Gallery</title>
+  <style>
+    /* --- General Page Styles --- */
+    body {
+      background-color: #1a1a1a;
+      color: #f0f0f0;
+      font-family: monospace;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1, h2, p {
+      margin: 10px 0;
+    }
+
+    /* --- Navigation Bar --- */
+    nav {
+      padding: 15px;
+      border-bottom: 1px solid #333;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #f0f0f0;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ff69b4; /* pink hover */
+    }
+
+    /* --- Gallery Layout --- */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px auto;
+      max-width: 1000px;
+    }
+
+    /* --- Art Card Style --- */
+    .art-card {
+      background: #222;
+      border-radius: 12px;
+      padding: 10px;
+      width: 220px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      transition: transform 0.2s;
+    }
+    .art-card:hover {
+      transform: scale(1.05);
+    }
+    .art-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .art-card p {
+      margin: 8px 0 0;
+      font-size: 14px;
+      line-height: 1.4em;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Projects</a>
+    <a href="#">About</a>
+    <a href="#">Gallery</a>
+  </nav>
+
+  <!-- Title Section -->
+  <h1>fanarts & commisions</h1>
+  <p>meowo's fanart. thanks for drawing me :3</p>
+
+  <!-- Gallery Section -->
+  <div class="gallery">
+
+    <div class="art-card">
+      <a href="D:\works\f. my fanart\fallengee2.jpeg" target="_blank">
+      <img src="D:\works\f. my fanart\fallengee2.jpeg" alt="Art 1">
+      </a>
+      <p><b>Artist:</b> fallengee</p>
+    </div>
+
+    <div class="art-card">
+      <a href="D:\works\f. my fanart\m0sinN4gant.jpg" target="_blank">
+      <img src="D:\works\f. my fanart\m0sinN4gant.jpg" alt="Art 2">
+      </a>
+      <p><b>Artist:</b> m0sinN4gant</p>
+    </div>
+
+    <div class="art-card">
+      <a href="D:\works\f. my fanart\PhrogEnthusiast52.jpg" target="_blank">
+      <img src="D:\works\f. my fanart\PhrogEnthusiast52.jpg" alt="Art 3">
+      </a>
+      <p><b>Artist:</b> PhrogEnthusiast52</p>
+    </div>
+    <div class="art-card">
+      <a href="D:\works\f. my fanart\PhrogEnthusiast52_1.jpg" target="_blank">
+      <img src="D:\works\f. my fanart\PhrogEnthusiast52_1.jpg" alt="Art 4">
+      </a>
+      <p><b>Artist:</b> PhrogEnthusiast52</p>
+    </div>
+
+    <div class="art-card">
+      <a href="D:\works\f. my fanart\sakura_kyoko99.jpg" target="_blank">
+      <img src="D:\works\f. my fanart\sakura_kyoko99.jpg" alt="Art 5">
+      </a>
+      <p><b>Artist:</b> sakura_kyoko99</p>
+    </div>
+
+    <div class="art-card">
+      <a href="D:\works\f. my fanart\BashirSolihik.png" target="_blank">
+      <img src="D:\works\f. my fanart\BashirSolihik.png" alt="Art 6">
+      </a>
+      <p><b>Artist:</b> TearsofMe43</p>
+    </div>
+
+    <div class="art-card">
+      <a href="D:\works\f. my fanart\bashirsolihindogfanart.png" target="_blank">
+      <img src="D:\works\f. my fanart\bashirsolihindogfanart.png" alt="Art 7">
+      </a>
+      <p><b>Artist:</b> Seqewo</p>
+    </div>
+
+  </div>
+</body>
+</html>
