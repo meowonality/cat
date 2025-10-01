@@ -7,19 +7,27 @@
   <!-- Import Ubuntu Mono font -->
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
   <style>
     /* --- General Page Styles --- */
     body {
-      background-color: #fbeded;
-      color: #000000;
+      background-color: #1a1a1a;
+      color: #f0f0f0;
       font-family: 'Ubuntu Mono', monospace;
       margin: 0;
       padding: 0;
       text-align: center;
     }
 
-    h1, h2, p {
-      margin: 10px 0;
+    h1 {
+      margin-top: 50px; /* pushes title lower from the top */
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 10px 0 30px; /* spacing under subtitle */
     }
 
     /* --- Gallery Layout --- */
@@ -27,18 +35,18 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 40px; /* increased spacing between cards */
-      margin: 40px auto; /* more space around gallery */
+      gap: 40px; /* spacing between cards */
+      margin: 40px auto;
       max-width: 1100px;
     }
 
     /* --- Art Card Style --- */
     .art-card {
-      background: #fad5d5;
+      background: #222;
       border-radius: 12px;
       padding: 15px;
-      width: 240px; /* slightly bigger card */
-      margin: 10px; /* extra spacing around each card */
+      width: 240px;
+      margin: 10px;
       box-shadow: 0 6px 12px rgba(0,0,0,0.5);
       transition: transform 0.2s, box-shadow 0.2s;
     }
@@ -61,7 +69,7 @@
 <body>
   <!-- Title Section -->
   <h1>fanarts & commissions</h1>
-  <p>meowo's fanart. will forever be immortalize. thanks for drawing me :3</p>
+  <p>meowo's fanart. thanks for drawing me :3</p>
 
   <!-- Gallery Section -->
   <div class="gallery">
@@ -74,29 +82,29 @@
     </div>
 
     <div class="art-card">
-      <a href="images/m0sinn4gant.jpeg" target="_blank">
-        <img src="images/m0sinn4gant.jpeg" alt="Art by m0sinN4gant">
+      <a href="images/m0sinn4gant.jpg" target="_blank">
+        <img src="images/m0sinn4gant.jpg" alt="Art by m0sinN4gant">
       </a>
       <p><b>Artist:</b> m0sinN4gant</p>
     </div>
 
     <div class="art-card">
-      <a href="images/phrogenthusiast52.jpeg" target="_blank">
-        <img src="images/phrogenthusiast52.jpeg" alt="Art by PhrogEnthusiast52">
+      <a href="images/phrogenthusiast52.jpg" target="_blank">
+        <img src="images/phrogenthusiast52.jpg" alt="Art by PhrogEnthusiast52">
       </a>
       <p><b>Artist:</b> PhrogEnthusiast52</p>
     </div>
 
     <div class="art-card">
-      <a href="images/phrogenthusiast52_1.jpeg" target="_blank">
-        <img src="images/phrogenthusiast52_1.jpeg" alt="Art by PhrogEnthusiast52">
+      <a href="images/phrogenthusiast52_1.jpg" target="_blank">
+        <img src="images/phrogenthusiast52_1.jpg" alt="Art by PhrogEnthusiast52">
       </a>
       <p><b>Artist:</b> PhrogEnthusiast52</p>
     </div>
 
     <div class="art-card">
-      <a href="images/sakura_kyoko99.jpeg" target="_blank">
-        <img src="images/sakura_kyoko99.jpeg" alt="Art by sakura_kyoko99">
+      <a href="images/sakura_kyoko99.jpg" target="_blank">
+        <img src="images/sakura_kyoko99.jpg" alt="Art by sakura_kyoko99">
       </a>
       <p><b>Artist:</b> sakura_kyoko99</p>
     </div>
@@ -118,7 +126,3 @@
   </div>
 </body>
 </html>
-
-
-
-
