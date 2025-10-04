@@ -51,7 +51,7 @@
       text-shadow: 0 0 6px #ffb6c1;
     }
 
-    /* --- Title Section (same as index.html) --- */
+    /* --- Title Section (matches index.html) --- */
     .title-section {
       background-color: #fad5d5;
       padding: 60px 20px;
@@ -79,6 +79,12 @@
       border-radius: 12px;
       padding: 40px;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .about-container:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.4);
     }
 
     .about-container img {
@@ -137,8 +143,10 @@
     <a href="aboutme.html">about me</a>
   </nav>
 
-  <!-- Title Section -->
-    <h1>about me</h1>
+  <!-- Title Section (same style as index.html) -->
+  <div class="title-section">
+    <h1>about me 🐾</h1>
+    <p>get to know the silly cat behind the art 💕</p>
   </div>
 
   <!-- About Me Section -->
