@@ -19,62 +19,47 @@
   <meta name="twitter:image" content="https://meowonality.github.io/cat/images/preview.png">
 
   <style>
+    /* --- General Styles (match index.html) --- */
     body {
       background-color: #fbeded;
-      color: #000;
+      color: #000000;
       font-family: 'Ubuntu Mono', monospace;
       margin: 0;
       padding: 0;
       text-align: center;
     }
 
+    /* --- Navigation (identical to index.html) --- */
     nav {
-      background: #f9bcbc;
-      padding: 14px;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      background-color: #fad5d5;
+      padding: 12px;
+      border-bottom: 2px solid #f5bebe;
       position: sticky;
       top: 0;
       z-index: 10;
     }
 
     nav a {
-      position: relative;
       color: #000;
       text-decoration: none;
-      font-weight: bold;
-      padding-bottom: 3px;
-      transition: color 0.2s;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0%;
-      height: 2px;
-      background-color: #ffffff;
-      transition: width 0.3s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
+      margin: 0 18px;
+      font-size: 18px;
+      transition: color 0.2s, text-shadow 0.2s;
     }
 
     nav a:hover {
-      color: #ffffff;
+      color: #ff69b4;
+      text-shadow: 0 0 6px #ffb6c1;
     }
 
+    /* --- Content Container --- */
     .about-container {
       max-width: 800px;
-      margin: 60px auto;
+      margin: 60px auto 80px;
       background: #fad5d5;
-      border-radius: 15px;
+      border-radius: 12px;
       padding: 40px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
     }
 
     .about-container img {
@@ -87,7 +72,6 @@
     }
 
     h1 {
-      font-size: 2em;
       margin-bottom: 10px;
     }
 
@@ -95,8 +79,10 @@
       font-size: 1em;
       line-height: 1.6em;
       margin: 10px 0;
+      color: #222;
     }
 
+    /* --- Social Links --- */
     .socials {
       margin-top: 30px;
     }
@@ -106,57 +92,53 @@
       text-decoration: none;
       margin: 0 10px;
       font-weight: bold;
-      position: relative;
+      transition: color 0.2s, text-shadow 0.2s;
     }
 
-    .socials a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0%;
-      height: 2px;
-      background-color: #ffffff;
-      transition: width 0.3s ease;
+    .socials a:hover {
+      color: #ff69b4;
+      text-shadow: 0 0 6px #ffb6c1;
     }
 
-    .socials a:hover::after {
-      width: 100%;
-    }
-
+    /* --- Footer (same look as gallery bottom) --- */
     footer {
-      background: #f9bcbc;
+      background: #fad5d5;
       padding: 15px;
-      margin-top: 40px;
+      border-top: 2px solid #f5bebe;
       font-size: 14px;
       color: #000;
-      box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
 <body>
 
+  <!-- Navigation -->
   <nav>
-    <a href="about.html">about me</a>
     <a href="index.html">fanarts & commissions</a>
+    <a href="about.html">about me</a>
   </nav>
 
+  <!-- About Me Section -->
   <div class="about-container">
     <img src="images/fallengee2.jpeg" alt="meowo avatar">
     <h1>hewwo! i’m meowonality!! 🐾</h1>
     <p>you can call me meowo, </p>
-    <p>my oc based of my real white cat! (benifacio [male] has his own birth certificate!!). interestingly my oc came first before i got my white cat (coincidence? :3)
-    meowo has a shy behaviour, always sits alone, snuggling in her cozy hoodie. >3<.</p>
+    <p>
+      my oc based off my real white cat! (benifacio [male] has his own birth certificate!!).  
+      interestingly, my oc came first before i got my white cat (coincidence? :3)
+      meowo has a shy behaviour, always sits alone, snuggling in her cozy hoodie. >3<.
+    </p>
 
     <div class="socials">
-      <p>me</p>
-      <a href="https://www.roblox.com/users/76050675/profile">Roblox</a> ·
-      <a href="https://www.reddit.com/user/Informal_Lab2393/">Reddit</a> ·
-      <a href="https://www.youtube.com/@BashirSolihin">Youtube</a> ·
-      <a href="https://www.youtube.com/@bashirsolihin2">Second Youtube</a> 
+      <p><b>me in socials</b></p>
+      <a href="https://www.roblox.com/users/76050675/profile" target="_blank">Roblox</a> ·
+      <a href="https://www.reddit.com/user/Informal_Lab2393/" target="_blank">Reddit</a> ·
+      <a href="https://www.youtube.com/@BashirSolihin" target="_blank">YouTube</a> ·
+      <a href="https://www.youtube.com/@bashirsolihin2" target="_blank">Second YouTube</a>
     </div>
   </div>
 
+  <!-- Footer -->
   <footer>
     by <b>meowo</b> — 😵‍💫 🐾
   </footer>
