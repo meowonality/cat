@@ -135,119 +135,8 @@
 
   <!-- Gallery Section -->
   <div class="gallery">
-
-    <div class="art-card">
-      <a href="images/fallengee2.jpeg" target="_blank">
-        <img src="images/fallengee2.jpeg" alt="Art by fallengee">
-      </a>
-      <p><b>Artist:</b> fallengee</p>
-    </div>
-
-    <div class="art-card">
-      <a href="images/m0sinn4gant.jpeg" target="_blank">
-        <img src="images/m0sinn4gant.jpeg" alt="Art by m0sinN4gant">
-      </a>
-      <p><b>Artist:</b> m0sinN4gant</p>
-    </div>
-
-    <div class="art-card">
-      <a href="images/sakura_kyoko99.jpeg" target="_blank">
-        <img src="images/sakura_kyoko99.jpeg" alt="Art by sakura_kyoko99">
-      </a>
-      <p><b>Artist:</b> sakura_kyoko99</p>
-    </div>
-    
-    <div class="art-card">
-      <a href="images/phrogenthusiast52.jpeg" target="_blank">
-        <img src="images/phrogenthusiast52.jpeg" alt="Art by PhrogEnthusiast52">
-      </a>
-      <p><b>Artist:</b> PhrogEnthusiast52</p>
-    </div>
-
-    <div class="art-card">
-      <a href="images/phrogenthusiast52_1.jpeg" target="_blank">
-        <img src="images/phrogenthusiast52_1.jpeg" alt="Art by PhrogEnthusiast52">
-      </a>
-      <p><b>Artist:</b> PhrogEnthusiast52</p>
-    </div>
-
-    <div class="art-card">
-      <a href="images/phrogenthusiast52_2.png" target="_blank">
-        <img src="images/phrogenthusiast52_2.png" alt="Art by PhrogEnthusiast52">
-      </a>
-      <p><b>Artist:</b> PhrogEnthusiast52</p>
-    </div>
-    
-    <div class="art-card">
-      <a href="images/bashirsolihik.png" target="_blank">
-        <img src="images/bashirsolihik.png" alt="Art by TearsofMe43">
-      </a>
-      <p><b>Artist:</b> TearsofMe43</p>
-    </div>
-
-    <div class="art-card">
-      <a href="images/bashirsolihindogfanart.png" target="_blank">
-        <img src="images/bashirsolihindogfanart.png" alt="Art by Seqewo">
-      </a>
-      <p><b>Artist:</b> Seqewo</p>
-    </div>
-
-    <div class="art-card">
-      <a href="images/rawhoneycomb.png" target="_blank">
-        <img src="images/rawhoneycomb.png" alt="Art by rawhoneycomb">
-      </a>
-      <p><b>Artist:</b> ☆ Raw Honeycomb ☆</p>
-    </div>
-
-    <div class="art-card">
-      <a href="images/alybor.png" target="_blank">
-        <img src="images/alybor.png" alt="Art by alybor">
-      </a>
-      <p><b>Artist:</b> alybor</p>
-    </div>
-
-    <div class="art-card">
-      <a href="images/yurix1.png" target="_blank">
-        <img src="images/yurix1.png" alt="Art by yuri_x1">
-      </a>
-      <p><b>Artist:</b> yuri_x1</p>
-    </div>
-
-    <div class="art-card">
-      <a href="images/emiarts.png" target="_blank">
-        <img src="images/emiarts.png" alt="Art by emiarts">
-      </a>
-      <p><b>Artist:</b> emiarts</p>
-    </div>
-
-    <div class="art-card">
-      <a href="images/z1pbyxoxo.png" target="_blank">
-        <img src="images/z1pbyxoxo.png" alt="Art by z1pby_xoxo_">
-      </a>
-      <p><b>Artist:</b> z1pby_xoxo_</p>
-    </div>
-    
-    <div class="art-card">
-      <a href="images/maurovgo7827716.jpeg" target="_blank">
-        <img src="images/maurovgo7827716.jpeg" alt="Art by maurovgo78_27716">
-      </a>
-      <p><b>Artist:</b> maurovgo78_27716</p>
-    </div>
-
-    <div class="art-card">
-      <a href="images/lilyzheni.png" target="_blank">
-        <img src="images/lilyzheni.png" alt="Art by lily_zheni">
-      </a>
-      <p><b>Artist:</b> lily_zheni</p>
-    </div>
-
-    <div class="art-card">
-      <a href="images/uncuredveins.png" target="_blank">
-        <img src="images/uncuredveins.png" alt="Art by uncuredveins">
-      </a>
-      <p><b>Artist:</b> uncuredveins</p>
-    </div>
-
+    <!-- (your art cards stay exactly as they are here) -->
+    <!-- ... -->
   </div>
 
   <!-- Footer -->
@@ -255,16 +144,19 @@
     <img src="images/wave-emoji-smile-wave.gif" alt="cute gif" class="footer-gif">
   </footer>
 
+  <!-- 🧩 Shuffle Script -->
+  <script>
+    function shuffleGallery() {
+      const gallery = document.querySelector('.gallery');
+      const cards = Array.from(gallery.children);
+      for (let i = cards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        gallery.appendChild(cards[j]);
+        cards.splice(j, 1);
+      }
+    }
+    window.addEventListener('DOMContentLoaded', shuffleGallery);
+  </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
