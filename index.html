@@ -255,6 +255,21 @@
     <img src="images/wave-emoji-smile-wave.gif" alt="cute gif" class="footer-gif">
   </footer>
 
+   <!-- Shuffle Script -->
+  <script>
+    function shuffleGallery() {
+      const gallery = document.querySelector('.gallery');
+      const cards = Array.from(gallery.children);
+      for (let i = cards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        gallery.appendChild(cards[j]);
+        cards.splice(j, 1);
+      }
+    }
+    window.addEventListener('DOMContentLoaded', shuffleGallery);
+  </script>
+
 </body>
 </html>
+
 
