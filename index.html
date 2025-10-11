@@ -120,6 +120,47 @@
       box-shadow: 0 0 8px rgba(255, 182, 193, 0.6);
       margin-top: 8px;
     }
+
+    /* --- Mobile Optimization --- */
+  @media (max-width: 768px) {
+    nav a {
+      display: inline-block;
+      margin: 6px 12px;
+      font-size: 16px;
+    }
+
+    h1 {
+      font-size: 1.5em;
+    }
+
+    p {
+      font-size: 0.95em;
+    }
+
+    .gallery {
+      gap: 20px;
+      padding: 0 10px;
+    }
+
+    .art-card {
+      max-width: 90%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .gallery {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    nav {
+      padding: 10px;
+    }
+
+    nav a {
+      margin: 5px 8px;
+      font-size: 15px;
+    }
   </style>
 </head>
 <body>
@@ -286,6 +327,7 @@
 
 </body>
 </html>
+
 
 
 
