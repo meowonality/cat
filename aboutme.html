@@ -20,13 +20,23 @@
 
   <style>
     body {
-      background-color: #fbeded;
-      color: #000000;
-      font-family: 'Ubuntu Mono', monospace;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
+  background: url('images/wallpapers.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #000000;
+  font-family: 'Ubuntu Mono', monospace;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* adjust opacity */
+  z-index: -1;
+}
 
     /* --- Navigation --- */
     nav {
