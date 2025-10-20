@@ -221,3 +221,27 @@ body.fade-in main {
   <footer>
     by <b>meowo</b> — (⁠≧⁠▽⁠≦⁠)
   </footer>
+
+  <!-- Fade Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // fade in
+      const main = document.querySelector("main");
+      main.classList.remove("fade-out");
+
+      // fade out on navigation
+      document.querySelectorAll("nav a").forEach(link => {
+        link.addEventListener("click", event => {
+          const targetUrl = link.getAttribute("href");
+          if (targetUrl && targetUrl !== window.location.pathname.split('/').pop()) {
+            event.preventDefault();
+            main.classList.add("fade-out");
+            setTimeout(() => {
+              window.location.href = targetUrl;
+            }, 500);
+          }
+        });
+      });
+    });
+  </script>
+</body>
