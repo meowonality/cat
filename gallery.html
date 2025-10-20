@@ -45,15 +45,14 @@
     }
 
     /* ---- Fade Animation only for Main Content ---- */
-main {
-  flex: 1;
-  opacity: 0;
-  transition: opacity 0.6s ease; /* fade duration */
-}
-
-body.fade-in main {
-  opacity: 1;
-}
+    main {
+      flex: 1;
+      opacity: 0;
+      transition: opacity 0.6s ease; /* fade duration */
+    }
+    body.fade-in main {
+      opacity: 1;
+    }
 
   /* --- Navigation --- */
   nav {
@@ -406,43 +405,40 @@ body.fade-in main {
     <img src="images/wave-emoji-smile-wave.gif" alt="cute gif" class="footer-gif">
   </footer>
 
-  <!-- Fade Script -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const main = document.querySelector("main");
+  <!-- Fade + Shuffle script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1) fade-in main content (body.fade-in main {opacity:1})
+      document.body.classList.add('fade-in');
 
-    // Add fade-in class to <body> on page load
-    document.body.classList.add("fade-in");
-
-    // Handle fade-out when navigating
-    document.querySelectorAll("nav a").forEach(link => {
-      link.addEventListener("click", event => {
-        const targetUrl = link.getAttribute("href");
-        if (targetUrl && targetUrl !== window.location.pathname.split('/').pop()) {
-          event.preventDefault();
-          document.body.classList.remove("fade-in"); // remove fade-in
-          main.style.opacity = "0"; // fade out content
-          setTimeout(() => {
-            window.location.href = targetUrl;
-          }, 500); // matches fade duration
-        }
+      // 2) fade-out on internal nav click (navbar and background remain)
+      document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', (e) => {
+          const href = link.getAttribute('href');
+          // only handle same-site page links (not external or anchors)
+          if (href && !href.startsWith('http') && !href.startsWith('#') && href !== window.location.pathname.split('/').pop()) {
+            e.preventDefault();
+            document.body.classList.remove('fade-in'); // triggers fade-out
+            setTimeout(() => { window.location.href = href; }, 600); // match CSS duration
+          }
+        });
       });
-    });
-  });
 
-  <!-- Shuffle the gallery -->
+      // 3) shuffle gallery cards once on load
       const gallery = document.querySelector('.gallery');
       if (gallery) {
         const cards = Array.from(gallery.children);
         for (let i = cards.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
+          // append chosen card (moves it)
           gallery.appendChild(cards[j]);
           cards.splice(j, 1);
         }
       }
     });
-</script>
-
+  </script>
+</body>
+</html>
 
 
 
