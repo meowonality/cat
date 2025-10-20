@@ -154,32 +154,39 @@ body.fade-in main {
 
     /* --- Music Player --- */
 .music-player {
-  background: rgba(250, 213, 213, 0.9);
-  border: 2px solid #f5bebe;
-  border-radius: 16px;
-  padding: 15px 25px;
-  width: 260px;
-  margin: 30px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  font-family: 'Ubuntu Mono';
+  margin-top: 15px;
 }
 
-.music-player button {
-  background: none;
+.music-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.music-controls button {
+  background-color: #f5bebe;
   border: none;
-  color: #a67b7b;
-  font-size: 22px;
+  color: #000;
+  font-size: 20px;
+  padding: 10px 14px;
+  border-radius: 10px;
   cursor: pointer;
-  margin: 0 6px;
-  transition: transform 0.2s;
+  transition: background-color 0.25s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-.music-player button:hover {
-  transform: scale(1.2);
-  color: #ff69b4;
+.music-controls button:hover {
+  background-color: #ffb6c1;
+  transform: scale(1.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.music-controls button:active {
+  transform: scale(1.05);
 }
 
 .music-player .time {
@@ -187,7 +194,7 @@ body.fade-in main {
   align-items: center;
   gap: 6px;
   margin-top: 10px;
-  width: 100%;
+  width: 80%;
 }
 
 #seekBar {
@@ -214,17 +221,23 @@ body.fade-in main {
       <p>welcome to my website! i made this so i can archive all the arts ive gotten from artists (⁠☆⁠▽⁠☆⁠)</p>
     </div>
 
-    <!-- Music Player -->
+    <!-- Title Box: Music Player -->
 <div class="title-box">
   <h1>now playing 🎵</h1>
-  <audio id="meowoMusic" src="music/song.mp3"></audio>
-  <button id="prevBtn">⏮</button>
-  <button id="playPauseBtn">▶️</button>
-  <button id="nextBtn">⏭</button>
-  <div class="time">
-    <span id="currentTime">0:00</span>
-    <input type="range" id="seekBar" value="0" min="0" max="100">
-    <span id="duration">0:00</span>
+  <div class="music-player">
+    <audio id="meowoMusic" src="music/song.mp3"></audio>
+
+    <div class="music-controls">
+      <button id="prevBtn">⏮</button>
+      <button id="playPauseBtn">▶️</button>
+      <button id="nextBtn">⏭</button>
+    </div>
+
+    <div class="time">
+      <span id="currentTime">0:00</span>
+      <input type="range" id="seekBar" value="0" min="0" max="100">
+      <span id="duration">0:00</span>
+    </div>
   </div>
 </div>
 
