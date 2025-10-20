@@ -227,25 +227,27 @@ body.fade-in main {
 
   <!-- Fade Script -->
   <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const main = document.querySelector("main");
+document.addEventListener("DOMContentLoaded", () => {
+  const main = document.querySelector("main");
 
-    // Add fade-in class to <body> on page load
-    document.body.classList.add("fade-in");
+  // Step 1: Start hidden, then fade in
+  main.style.opacity = "0";
+  setTimeout(() => {
+    main.style.transition = "opacity 0.8s ease"; // 0.8s fade duration
+    main.style.opacity = "1";
+  }, 50); // tiny delay so browser registers the initial state
 
-    // Handle fade-out when navigating
-    document.querySelectorAll("nav a").forEach(link => {
-      link.addEventListener("click", event => {
-        const targetUrl = link.getAttribute("href");
-        if (targetUrl && targetUrl !== window.location.pathname.split('/').pop()) {
-          event.preventDefault();
-          document.body.classList.remove("fade-in"); // remove fade-in
-          main.style.opacity = "0"; // fade out content
-          setTimeout(() => {
-            window.location.href = targetUrl;
-          }, 500); // matches fade duration
-        }
-      });
+  // Step 2: Fade out when navigating
+  document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", event => {
+      const targetUrl = link.getAttribute("href");
+      if (targetUrl && targetUrl !== window.location.pathname.split('/').pop()) {
+        event.preventDefault();
+        main.style.opacity = "0"; // fade out
+        setTimeout(() => {
+          window.location.href = targetUrl;
+        }, 800); // must match 0.8s fade duration
+      }
     });
   });
-</script>
+<script>
