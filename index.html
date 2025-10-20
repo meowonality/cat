@@ -147,24 +147,25 @@ body.fade-in main {
 
   <!-- Fade Script -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // fade in
-      const main = document.querySelector("main");
-      main.classList.remove("fade-out");
+  document.addEventListener("DOMContentLoaded", () => {
+    const main = document.querySelector("main");
 
-      // fade out on navigation
-      document.querySelectorAll("nav a").forEach(link => {
-        link.addEventListener("click", event => {
-          const targetUrl = link.getAttribute("href");
-          if (targetUrl && targetUrl !== window.location.pathname.split('/').pop()) {
-            event.preventDefault();
-            main.classList.add("fade-out");
-            setTimeout(() => {
-              window.location.href = targetUrl;
-            }, 500);
-          }
-        });
+    // Add fade-in class to <body> on page load
+    document.body.classList.add("fade-in");
+
+    // Handle fade-out when navigating
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", event => {
+        const targetUrl = link.getAttribute("href");
+        if (targetUrl && targetUrl !== window.location.pathname.split('/').pop()) {
+          event.preventDefault();
+          document.body.classList.remove("fade-in"); // remove fade-in
+          main.style.opacity = "0"; // fade out content
+          setTimeout(() => {
+            window.location.href = targetUrl;
+          }, 500); // matches fade duration
+        }
       });
     });
-  </script>
-</body>
+  });
+</script>
