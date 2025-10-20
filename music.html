@@ -5,7 +5,8 @@
   <title>Background Music</title>
 </head>
 <body>
-  <audio id="meowoMusic" autoplay loop>
+  <!-- Audio Element -->
+  <audio id="meowoMusic" autoplay loop></audio>
 
   <script>
     const songs = [
@@ -16,6 +17,10 @@
 
     let currentSong = 0;
     const audio = document.getElementById("meowoMusic");
+
+    // Load the first song
+    audio.src = songs[currentSong];
+    audio.play();
 
     // When one song ends, play the next
     audio.addEventListener("ended", () => {
