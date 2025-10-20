@@ -423,8 +423,12 @@
           main.style.opacity = "0"; // fade out content
           setTimeout(() => {
             window.location.href = targetUrl;
-             500); // matches fade duration
+          }, 500); // matches fade duration
+        }
+      });
+    });
         
+      // Shuffle Script
       const gallery = document.querySelector('.gallery');
       if (gallery) {
         const cards = Array.from(gallery.children);
