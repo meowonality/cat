@@ -171,7 +171,7 @@ body.fade-in main {
   }
 </style>
 
-  <!-- Fade + Shuffle Scripts -->
+<!-- Fade + Shuffle Scripts -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       // Page Fade Transition
@@ -203,7 +203,7 @@ body.fade-in main {
     });
   </script>
 </head>
-
+  
 <body>
 
   <!-- Navigation -->
@@ -442,28 +442,6 @@ body.fade-in main {
     <img src="images/wave-emoji-smile-wave.gif" alt="cute gif" class="footer-gif">
   </footer>
 
-  <!-- Fade Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // fade in
-      const main = document.querySelector("main");
-      main.classList.remove("fade-out");
-
-      // fade out on navigation
-      document.querySelectorAll("nav a").forEach(link => {
-        link.addEventListener("click", event => {
-          const targetUrl = link.getAttribute("href");
-          if (targetUrl && targetUrl !== window.location.pathname.split('/').pop()) {
-            event.preventDefault();
-            main.classList.add("fade-out");
-            setTimeout(() => {
-              window.location.href = targetUrl;
-            }, 500);
-          }
-        });
-      });
-    });
-  </script>
 </body>
 
 
