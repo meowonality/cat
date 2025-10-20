@@ -405,7 +405,7 @@
     <img src="images/wave-emoji-smile-wave.gif" alt="cute gif" class="footer-gif">
   </footer>
 
-  <!-- Fade Script-->
+  <!-- Fade & Shuffle Script-->
   <script>
   document.addEventListener("DOMContentLoaded", () => {
       const main = document.querySelector("main");
@@ -423,11 +423,8 @@
           main.style.opacity = "0"; // fade out content
           setTimeout(() => {
             window.location.href = targetUrl;
-          }, 500); // matches fade duration
-        });
-      });
-
-      <!-- Shuffle Script -->
+             500); // matches fade duration
+        
       const gallery = document.querySelector('.gallery');
       if (gallery) {
         const cards = Array.from(gallery.children);
