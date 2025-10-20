@@ -407,20 +407,23 @@
 
   <!-- Fade Script-->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // 1) fade-in main content (body.fade-in main {opacity:1})
-      document.body.classList.add('fade-in');
+  document.addEventListener("DOMContentLoaded", () => {
+      const main = document.querySelector("main");
 
-      // 2) fade-out on internal nav click (navbar and background remain)
-      document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', (e) => {
-          const href = link.getAttribute('href');
-          // only handle same-site page links (not external or anchors)
-          if (href && !href.startsWith('http') && !href.startsWith('#') && href !== window.location.pathname.split('/').pop()) {
-            e.preventDefault();
-            document.body.classList.remove('fade-in'); // triggers fade-out
-            setTimeout(() => { window.location.href = href; }, 600); // match CSS duration
-          }
+    // Add fade-in class to <body> on page load
+    document.body.classList.add("fade-in");
+
+    // Handle fade-out when navigating
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", event => {
+        const targetUrl = link.getAttribute("href");
+        if (targetUrl && targetUrl !== window.location.pathname.split('/').pop()) {
+          event.preventDefault();
+          document.body.classList.remove("fade-in"); // remove fade-in
+          main.style.opacity = "0"; // fade out content
+          setTimeout(() => {
+            window.location.href = targetUrl;
+          }, 500); // matches fade duration
         });
       });
 
@@ -439,6 +442,25 @@
   </script>
 </body>
 </html>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const main = document.querySelector("main");
+
+    // Add fade-in class to <body> on page load
+    document.body.classList.add("fade-in");
+
+    // Handle fade-out when navigating
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", event => {
+        const targetUrl = link.getAttribute("href");
+        if (targetUrl && targetUrl !== window.location.pathname.split('/').pop()) {
+          event.preventDefault();
+          document.body.classList.remove("fade-in"); // remove fade-in
+          main.style.opacity = "0"; // fade out content
+          setTimeout(() => {
+            window.location.href = targetUrl;
+          }, 500); // matches fade duration
 
 
 
