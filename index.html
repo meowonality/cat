@@ -309,6 +309,10 @@ const nextBtn = document.getElementById('nextBtn');
 // Load first song
 audio.src = songs[currentSong];
 
+// NEW: Update wavy song title
+const songTitleEl = document.getElementById('currentSongTitle');
+songTitleEl.textContent = songs[currentSong].split('/').pop().replace('.mp3', '');
+
 // Play / Pause
 playPauseBtn.addEventListener('click', () => {
   if (audio.paused) {
@@ -324,6 +328,7 @@ playPauseBtn.addEventListener('click', () => {
 nextBtn.addEventListener('click', () => {
   currentSong = (currentSong + 1) % songs.length;
   audio.src = songs[currentSong];
+  songTitleEl.textContent = songs[currentSong].split('/').pop().replace('.mp3', '');
   audio.play();
   playPauseBtn.textContent = '⏸️';
 });
@@ -332,6 +337,7 @@ nextBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', () => {
   currentSong = (currentSong - 1 + songs.length) % songs.length;
   audio.src = songs[currentSong];
+  songTitleEl.textContent = songs[currentSong].split('/').pop().replace('.mp3', '');
   audio.play();
   playPauseBtn.textContent = '⏸️';
 });
