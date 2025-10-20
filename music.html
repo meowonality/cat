@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Music</title>
+</head>
+<body>
+  <audio id="meowoMusic" autoplay loop>
+    <source src="music/song1.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const songs = [
+      "music/song1.mp3",
+      "music/song2.mp3",
+      "music/song3.mp3"
+    ];
+
+    let currentSong = 0;
+    const audio = document.getElementById("meowoMusic");
+
+    // When one song ends, play the next
+    audio.addEventListener("ended", () => {
+      currentSong = (currentSong + 1) % songs.length;
+      audio.src = songs[currentSong];
+      audio.play();
+    });
+  </script>
+</body>
+</html>
