@@ -201,6 +201,24 @@ body.fade-in main {
   flex: 1;
   accent-color: #f5bebe;
 }
+
+/* --- Wavy Text Animation --- */
+.wavy-text {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff69b4;
+  margin-top: 6px;
+  animation: wave 1.8s infinite ease-in-out;
+  letter-spacing: 1px;
+}
+
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-4px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(4px); }
+}
   </style>
 </head>
 
@@ -224,6 +242,8 @@ body.fade-in main {
     <!-- Title Box: Music Player -->
 <div class="title-box">
   <h1>meowo's music player</h1>
+  <p id="currentSongTitle" class="wavy-text">loading...</p>
+
   <div class="music-player">
     <audio id="meowoMusic" autoplay loop></audio>
 
