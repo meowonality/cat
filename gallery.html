@@ -194,7 +194,28 @@ body::before {
       font-size: 15px;
     }
   </style>
+
+  <!-- Fade Out -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll("a");
+      links.forEach(link => {
+        const href = link.getAttribute("href");
+        if (href && !href.startsWith("#") && !href.startsWith("http")) {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(() => {
+              window.location = href;
+            }, 500);
+          });
+        }
+      });
+      document.body.classList.remove("fade-out");
+    });
+  </script>
 </head>
+
 <body>
 
   <!-- Navigation -->
@@ -387,8 +408,7 @@ body::before {
         </a>
         <p><b>Artist:</b> jjezi</p>
       </div>
-
-  
+
     <div class="art-card">
         <a href="images/mochimoshymushroom.png" target="_blank">
           <img src="images/mochimoshymushroom.png" alt="Art by mochimoshymushroom">
