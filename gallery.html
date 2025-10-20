@@ -25,24 +25,36 @@
   <meta name="twitter:image" content="https://meowonality.github.io/cat/images/preview.png">
 
   <style>
-    body {
-  background: url('images/wallpapers.png') no-repeat center center fixed;
-  background-size: cover;
-  color: #000000;
-  font-family: 'Ubuntu Mono';
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: 'Ubuntu Mono';
+      color: #000000;
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+      transition: opacity 0.5s ease; /* fade transition */
+    }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(255, 255, 255, 0.5); /* adjust opacity */
-  z-index: -1;
-}
+    body.fade-out {
+      opacity: 0;
+    }
+
+    body {
+      background: url('images/wallpapers.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      z-index: -1;
+    }
 
     /* --- Navigation --- */
     nav {
@@ -195,9 +207,10 @@ body::before {
     }
   </style>
 
-  <!-- Fade Out -->
+  <!-- Fade + Shuffle Scripts -->
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
+      // Page Fade Transition
       const links = document.querySelectorAll("a");
       links.forEach(link => {
         const href = link.getAttribute("href");
@@ -212,6 +225,17 @@ body::before {
         }
       });
       document.body.classList.remove("fade-out");
+
+      // Shuffle the gallery
+      const gallery = document.querySelector('.gallery');
+      if (gallery) {
+        const cards = Array.from(gallery.children);
+        for (let i = cards.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          gallery.appendChild(cards[j]);
+          cards.splice(j, 1);
+        }
+      }
     });
   </script>
 </head>
@@ -449,21 +473,7 @@ body::before {
   <footer>
     <img src="images/wave-emoji-smile-wave.gif" alt="cute gif" class="footer-gif">
   </footer>
-
-   <!-- Shuffle Script -->
-  <script>
-    function shuffleGallery() {
-      const gallery = document.querySelector('.gallery');
-      const cards = Array.from(gallery.children);
-      for (let i = cards.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        gallery.appendChild(cards[j]);
-        cards.splice(j, 1);
-      }
-    }
-    window.addEventListener('DOMContentLoaded', shuffleGallery);
-  </script>
-
+
 </body>
 </html>
 
