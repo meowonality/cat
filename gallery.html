@@ -25,7 +25,7 @@
   <meta name="twitter:image" content="https://meowonality.github.io/cat/images/preview.png">
 
   <style>
-  html, body {
+  main {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -35,10 +35,10 @@
     display: flex;
     flex-direction: column;
     opacity: 1;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.6s ease;
   }
 
-  body.fade-out {
+    main.fade-out {
     opacity: 0;
   }
 
@@ -211,6 +211,9 @@
     <a href="aboutme.html">about me</a>
   </nav>
   
+  <!-- Main Content (fades only this part) -->
+  <main>
+
   <!-- Title Section -->
   <div class="title-box">
   <h1>gallery</h1>
@@ -430,14 +433,36 @@
         <p><b>Artist:</b> echomoon10</p>
       </div>
     </div>
+  </main>
 
   <!-- Footer --> 
   <footer>
     <img src="images/wave-emoji-smile-wave.gif" alt="cute gif" class="footer-gif">
   </footer>
 
+  <!-- Fade Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // fade in
+      const main = document.querySelector("main");
+      main.classList.remove("fade-out");
+
+      // fade out on navigation
+      document.querySelectorAll("nav a").forEach(link => {
+        link.addEventListener("click", event => {
+          const targetUrl = link.getAttribute("href");
+          if (targetUrl && targetUrl !== window.location.pathname.split('/').pop()) {
+            event.preventDefault();
+            main.classList.add("fade-out");
+            setTimeout(() => {
+              window.location.href = targetUrl;
+            }, 500);
+          }
+        });
+      });
+    });
+  </script>
 </body>
-</html>
 
 
 
