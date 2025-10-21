@@ -219,6 +219,33 @@ body.fade-in main {
   50% { transform: translateY(0); }
   75% { transform: translateY(4px); }
 }
+
+/* --- Side-by-side boxes --- */
+.box-container {
+  display: flex;
+  justify-content: center;   /* centers them horizontally */
+  align-items: flex-start;    /* align tops */
+  gap: 20px;                  /* space between boxes */
+  margin-top: 20px;
+}
+
+.custom-box {
+  background: #fad5d5;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+}
+
+.small-box {
+  width: 300px;
+}
+
+.large-box {
+  width: 500px;
+}
   </style>
 </head>
 
@@ -258,6 +285,14 @@ body.fade-in main {
       <input type="range" id="seekBar" value="0" min="0" max="100">
       <span id="duration">0:00</span>
     </div>
+
+!-- Two boxes side by side -->
+<div class="box-container">
+  <div class="custom-box small-box">
+    <p>this is the 300 px wide box 🩷</p>
+  </div>
+  <div class="custom-box large-box">
+    <p>this is the 500 px wide box 💖</p>
   </div>
 </div>
 
