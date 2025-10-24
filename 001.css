@@ -1,0 +1,156 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url("Helvetica.ttf");
+}
+
+@font-face {
+  font-family: "Chiru";
+  src: url("chirufont.ttf");
+}
+
+@font-face {
+  font-family: "Barcode";
+  src: url("LibreBarcode128-Regular.ttf");
+}
+
+:root {
+  /* colors */
+  --top-background-color: #ffffff;
+  --bottom-background-color: #ffdfefff; /* i would suggest using a lighter color for this one, as if it's too dark, it can come off pretty heavy. */
+  --id-border-color: #c4c0c1;
+  --image-border-color: #000000;
+
+  /* fonts */
+  --main: "Helvetica";
+  --signature: "Chiru";
+  --barcode: "Barcode";
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(
+    0deg,
+    var(--bottom-background-color) 0%,
+    var(--top-background-color) 30%,
+    var(--top-background-color) 100%
+  );
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-family: var(--main);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  min-height: 230px;
+  max-width: 400px;
+  height: auto;
+  width: 100%;
+  background: linear-gradient(
+    0deg,
+    var(--bottom-background-color) 0%,
+    var(--top-background-color) 35%,
+    var(--top-background-color) 100%
+  );
+  border: 1px solid var(--id-border-color);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 80%;
+  flex-wrap: wrap;
+}
+
+.side {
+  height: 100%;
+  width: 150px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.pfp {
+  height: 100%;
+  max-width: 100%;
+  aspect-ratio: 3.5 / 5;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--image-border-color);
+}
+
+.pfp > img {
+  height: 100%;
+}
+
+.info {
+  height: 100%;
+  width: 200px;
+}
+
+.bottom {
+  text-align: center;
+  margin-top: -20px;
+}
+
+p,
+h1 {
+  margin: 5px;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+.signature {
+  margin-top: 20px;
+}
+
+.handwriting {
+  font-family: var(--signature);
+}
+
+.barcode {
+  font-family: var(--barcode);
+  font-size: 40px;
+  padding-top: 5px;
+}
+
+.link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  max-width: 300px;
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    margin-top: 0px;
+  }
+
+  .top {
+    width: 100%;
+  }
+
+  .side {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+}
