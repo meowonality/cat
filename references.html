@@ -10,25 +10,25 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-    <!-- Open Graph + Twitter -->
+  <!-- Open Graph + Twitter -->
   <meta property="og:title" content="meowo's references 🐾">
   <meta property="og:description" content="meowo's references">
   <meta property="og:image" content="https://meowonality.github.io/cat/images/preview.png">
-  <meta property="og:url" content="https://meowonality.github.io/cat/index.html">
-  <meta property="og:type" content="home">
+  <meta property="og:url" content="https://meowonality.github.io/cat/references.html">
+  <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="meowo's references 🐾">
   <meta name="twitter:description" content="meowo's references">
   <meta name="twitter:image" content="https://meowonality.github.io/cat/images/preview.png">
 
   <!-- Style -->
-    <style>
+  <style>
     html, body {
       height: 100%;
       margin: 0;
       padding: 0;
       text-align: center;
-      font-family: 'Ubuntu Mono';
+      font-family: 'Ubuntu Mono', monospace;
       color: #000000;
       display: flex;
       flex-direction: column;
@@ -49,125 +49,127 @@
     main {
       flex: 1;
       opacity: 0;
-      transition: opacity 0.6s ease; /* fade duration */
+      transition: opacity 0.6s ease;
     }
+
     body.fade-in main {
       opacity: 1;
     }
 
-  /* --- Navigation --- */
-  nav {
-    background-color: #fad5d5;
-    padding: 12px;
-    border-bottom: 2px solid #f5bebe;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-
-  nav a {
-    color: #000;
-    text-decoration: none;
-    margin: 0 18px;
-    font-size: 18px;
-    transition: color 0.2s, text-shadow 0.2s;
-  }
-
-  nav a:hover {
-    color: #ff69b4;
-    text-shadow: 0 0 6px #ffb6c1;
-  }
-
-  /* --- Title Box --- */
-  .title-box {
-    background: #fad5d5;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 40px auto 20px;
-    width: 90%;
-    max-width: 600px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  }
-
-  .title-box h1 {
-    margin: 0 0 10px 0;
-    font-size: 26px;
-  }
-
-  .title-box p {
-    margin: 0;
-    color: #222;
-    font-size: 16px;
-  }
-
-  /* --- Gallery Layout --- */
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin: 50px auto 90px;
-    max-width: 1150px;
-    padding: 0 30px;
-    justify-items: center;
-  }
-
-  /* --- Art Card --- */
-  .reference-card {
-    background: #fad5d5;
-    border-radius: 12px;
-    padding: 15px;
-    width: 100%;
-    max-width: 300px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .reference-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
-  }
-
-  .reference-card img {
-    max-width: 100%;
-    border-radius: 8px;
-    display: block;
-  }
-
-  .reference-card p {
-    margin: 10px 0 0;
-    font-size: 15px;
-    line-height: 1.5em;
-  }
-
-  /* --- Footer --- */
-  footer {
-    background-color: #fad5d5;
-    padding: 16px 0;
-    border-top: 2px solid #f5bebe;
-  }
-
-  .footer-gif {
-    width: 60px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 0 8px rgba(255, 182, 193, 0.6);
-    margin-top: 8px;
-  }
-
-  /* --- Responsive Adjustments --- */
-  @media (max-width: 1024px) {
-    .gallery {
-      grid-template-columns: repeat(2, 1fr);
+    /* --- Navigation --- */
+    nav {
+      background-color: #fad5d5;
+      padding: 12px;
+      border-bottom: 2px solid #f5bebe;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
-  }
 
-  @media (max-width: 600px) {
-    .gallery {
-      grid-template-columns: 1fr;
+    nav a {
+      color: #000;
+      text-decoration: none;
+      margin: 0 18px;
+      font-size: 18px;
+      transition: color 0.2s, text-shadow 0.2s;
     }
-  }
-</style>
-  
+
+    nav a:hover {
+      color: #ff69b4;
+      text-shadow: 0 0 6px #ffb6c1;
+    }
+
+    /* --- Title Box --- */
+    .title-box {
+      background: #fad5d5;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 40px auto 20px;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .title-box h1 {
+      margin: 0 0 10px 0;
+      font-size: 26px;
+    }
+
+    .title-box p {
+      margin: 0;
+      color: #222;
+      font-size: 16px;
+    }
+
+    /* --- Gallery Layout --- */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin: 50px auto 90px;
+      max-width: 1150px;
+      padding: 0 30px;
+      justify-items: center;
+    }
+
+    /* --- Reference Card --- */
+    .reference-card {
+      background: #fad5d5;
+      border-radius: 12px;
+      padding: 15px;
+      width: 100%;
+      max-width: 300px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .reference-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    }
+
+    .reference-card img {
+      max-width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .reference-card p {
+      margin: 10px 0 0;
+      font-size: 15px;
+      line-height: 1.5em;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background-color: #fad5d5;
+      padding: 16px 0;
+      border-top: 2px solid #f5bebe;
+    }
+
+    .footer-gif {
+      width: 60px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(255, 182, 193, 0.6);
+      margin-top: 8px;
+    }
+
+    /* --- Responsive Adjustments --- */
+    @media (max-width: 1024px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
 <body>
 
   <!-- Navigation -->
@@ -177,104 +179,105 @@
     <a href="references.html">references</a>
     <a href="aboutme.html">about me</a>
   </nav>
-  
-  <!-- Main Content (fades only this part) -->
+
+  <!-- Main Content -->
   <main>
-
-  <!-- Title Section -->
-  <div class="title-box">
-  <h1>references</h1>
-  <p>meowo's references, for the one who needed the most</p>
-  </div>
-
-  <div class="title-box">
-  <h1>moodboards</h1>
-  <p>you guys are having pinterest moodboards rn.</p>
-  </div>
-
-  <!-- Gallery Section -->
-  <div class="gallery">
-
-    <div class="reference-card">
-      <a href="moodboards/asciicat.png" target="_blank">
-        <img src="moodboards/asciicat.png" alt="moodboard of ascii cat">
-      </a>
-      <p><b>ascii cat</b></p>
+    <!-- Title Section -->
+    <div class="title-box">
+      <h1>references</h1>
+      <p>meowo's references, for the one who needed the most</p>
     </div>
 
-    <div class="reference-card">
-      <a href="moodboards/heart.png" target="_blank">
-        <img src="moodboards/heart.png" alt="moodboard of heart">
-      </a>
-      <p><b>heart</b></p>
+    <div class="title-box">
+      <h1>moodboards</h1>
+      <p>you guys are having pinterest moodboards rn.</p>
     </div>
 
-    <div class="reference-card">
-      <a href="moodboards/nyancat.png" target="_blank">
-        <img src="moodboards/nyancat.png" alt="moodboard of nyan cat">
-      </a>
-      <p><b>nyan cat</b></p>
-    </div>
+    <!-- Gallery Section -->
+    <div class="gallery">
+      <div class="reference-card">
+        <a href="moodboards/asciicat.png" target="_blank">
+          <img src="moodboards/asciicat.png" alt="moodboard of ascii cat">
+        </a>
+        <p><b>ascii cat</b></p>
+      </div>
 
-    <div class="reference-card">
-      <a href="moodboards/pinkheart.png" target="_blank">
-        <img src="moodboards/pinkheart.png" alt="moodboard of pink heart">
-      </a>
-      <p><b>pink heart</b></p>
-    </div>
+      <div class="reference-card">
+        <a href="moodboards/heart.png" target="_blank">
+          <img src="moodboards/heart.png" alt="moodboard of heart">
+        </a>
+        <p><b>heart</b></p>
+      </div>
 
-    <div class="reference-card">
-      <a href="moodboards/strawberry.png" target="_blank">
-        <img src="moodboards/strawberry.png" alt="moodboard of strawberry">
-      </a>
-      <p><b>strawberry</b></p>
-    </div>
+      <div class="reference-card">
+        <a href="moodboards/nyancat.png" target="_blank">
+          <img src="moodboards/nyancat.png" alt="moodboard of nyan cat">
+        </a>
+        <p><b>nyan cat</b></p>
+      </div>
 
-    <div class="reference-card">
-      <a href="moodboards/white.png" target="_blank">
-        <img src="moodboards/white.png" alt="moodboard of white">
-      </a>
-      <p><b>white</b></p>
-    </div>
+      <div class="reference-card">
+        <a href="moodboards/pinkheart.png" target="_blank">
+          <img src="moodboards/pinkheart.png" alt="moodboard of pink heart">
+        </a>
+        <p><b>pink heart</b></p>
+      </div>
 
-    <div class="reference-card">
-      <a href="moodboards/windowxp.png" target="_blank">
-        <img src="moodboards/windowxp.png" alt="moodboard of window xp">
-      </a>
-      <p><b>window xp</b></b></p>
+      <div class="reference-card">
+        <a href="moodboards/strawberry.png" target="_blank">
+          <img src="moodboards/strawberry.png" alt="moodboard of strawberry">
+        </a>
+        <p><b>strawberry</b></p>
+      </div>
+
+      <div class="reference-card">
+        <a href="moodboards/white.png" target="_blank">
+          <img src="moodboards/white.png" alt="moodboard of white">
+        </a>
+        <p><b>white</b></p>
+      </div>
+
+      <div class="reference-card">
+        <a href="moodboards/windowxp.png" target="_blank">
+          <img src="moodboards/windowxp.png" alt="moodboard of window xp">
+        </a>
+        <p><b>window xp</b></p>
+      </div>
     </div>
-  </div>
-    
-  <!-- Footer --> 
+  </main>
+
+  <!-- Footer -->
   <footer>
     <p>≽^- ˕ -^≼</p>
   </footer>
 
-  <!-- Fade Script-->
+  <!-- Fade Script -->
   <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const main = document.querySelector("main");
+  document.addEventListener("DOMContentLoaded", () => {
+    const main = document.querySelector("main");
 
-  // Step 1: Start hidden, then fade in
-  main.style.opacity = "0";
-  setTimeout(() => {
-    main.style.transition = "opacity 0.8s ease"; // 0.8s fade duration
-    main.style.opacity = "1";
-  }, 50); // tiny delay so browser registers the initial state
+    // Step 1: Start hidden, then fade in
+    main.style.opacity = "0";
+    setTimeout(() => {
+      main.style.transition = "opacity 0.8s ease";
+      main.style.opacity = "1";
+    }, 50);
 
-  // Step 2: Fade out when navigating
-  document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", event => {
-      const targetUrl = link.getAttribute("href");
-      if (targetUrl && targetUrl !== window.location.pathname.split('/').pop()) {
-        event.preventDefault();
-        main.style.opacity = "0"; // fade out
-        setTimeout(() => {
-          window.location.href = targetUrl;
-        }, 800);
-      }
+    // Step 2: Fade out when navigating
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", event => {
+        const targetUrl = link.getAttribute("href");
+        if (targetUrl && targetUrl !== window.location.pathname.split('/').pop()) {
+          event.preventDefault();
+          main.style.opacity = "0";
+          setTimeout(() => {
+            window.location.href = targetUrl;
+          }, 800);
+        }
+      });
+    });
   });
   </script>
 
-  </body>
-  </html>
+</body>
+</html>
