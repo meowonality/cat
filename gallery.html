@@ -194,6 +194,55 @@
   <p>meowo's gallery, immortalized forever. thank you for drawing me :3</p>
   </div>
 
+/* --- Gallery Hover Popup --- */
+
+.gallery-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.gallery-dropdown > a {
+  display: inline-block;
+}
+
+.gallery-popup {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background: #fad5d5;
+  border: 2px solid #f5bebe;
+  border-radius: 12px;
+  padding: 10px;
+  min-width: 160px;
+
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  z-index: 20;
+}
+
+/* Show popup when hovering Gallery */
+.gallery-dropdown:hover .gallery-popup {
+  display: block;
+}
+
+/* Popup buttons */
+.gallery-popup a {
+  display: block;
+  margin: 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+/* Hover effect for the two choices */
+.gallery-popup a:hover {
+  background: #f5bebe;
+  color: #ff69b4;
+  text-shadow: none;
+}
   <!-- Gallery Section -->
   <div class="gallery">
 
