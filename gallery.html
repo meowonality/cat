@@ -57,13 +57,26 @@
 
   /* --- Navigation --- */
   nav {
-    background-color: #fad5d5;
-    padding: 12px;
-    border-bottom: 2px solid #f5bebe;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
+      background-color: #fad5d5;
+      padding: 12px;
+      border-bottom: 2px solid #f5bebe;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #000;
+      text-decoration: none;
+      margin: 0 18px;
+      font-size: 18px;
+      transition: color 0.2s, text-shadow 0.2s;
+    }
+
+    nav a:hover {
+      color: #ff69b4;
+      text-shadow: 0 0 6px #ffb6c1;
+    }
 
   /* --- Title Box --- */
   .title-box {
