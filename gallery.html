@@ -100,6 +100,46 @@
     font-size: 16px;
   }
 
+      /* --- OC Selection Boxes --- */
+.oc-selection {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px auto 40px;
+}
+
+.oc-box {
+  width: 220px;
+  padding: 18px;
+  background: #fad5d5;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+
+  color: #000;
+  text-decoration: none;
+
+  transition: 
+    color 0.2s,
+    background-color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.oc-box h2 {
+  margin: 0 0 5px;
+  font-size: 20px;
+}
+
+.oc-box p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.oc-box:hover {
+      color: #ff69b4;
+      text-shadow: 0 0 6px #ffb6c1;
+    }
+
   /* --- Gallery Layout --- */
   .gallery {
     display: grid;
@@ -186,6 +226,18 @@
   <h1>gallery</h1>
   <p>meowo's gallery, immortalized forever. thank you for drawing me :3</p>
   </div>
+
+  <!-- OC Selection -->
+<div class="oc-selection">
+  <a href="gallery.html" class="oc-box">
+    <h2>main oc</h2>
+    <p>haiiiii this is literally me!!!</p>
+  </a>
+  <a href="gallery2.html" class="oc-box">
+    <h2>furry oc</h2>
+    <p>meowww mrow meow merooww!!! !!</p>
+  </a>
+</div>
 
   <!-- Gallery Section -->
   <div class="gallery">
